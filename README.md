@@ -1,12 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LogicForge
+--
+## Features
 
-# Run and deploy your AI Studio app
+### Natural-Language → Verilog
+Describe any circuit in English (ex, “4-bit synchronous counter”) and LogicForge auto-generates-
+- Verilog module
+- Testbench
+- Circuit explanation
+- Simulation vectors
 
-This contains everything you need to run your app locally.
+### Interactive Logic Schematic
+Clean, auto-laid-out visualization of the generated circuit:
+- Gates, flip-flops, muxes, adders
+- Input/output nodes
+- Wire connections
 
-View your app in AI Studio: https://ai.studio/apps/drive/1g6_JXboWY-7rUh9xekTvnEbM2se6XMtk
+### Real-Time Waveform Analyzer
+Simulated timing diagrams showing:
+- Clock edges  
+- Reset behavior  
+- Register updates  
+- Signal transitions
+
+### Tabs for Specs, Verilog, and Testbench
+Quickly switch between the circuit description, HDL, and testbench code.
+
+---
+
+## Tech Stack
+- **Frontend:** React, TypeScript, Tailwind  
+- **Visualization:** React Flow / SVG Canvas  
+- **Simulation:** JS/WASM logic engine  
+- **Backend:** Node/Python + Gemini 3 API  
+
+---
+
+## Getting Started
+Clone the repo and run:
+
+```bash
+cd frontend && npm install && npm run dev
+cd backend && npm install && npm run dev
 
 ## Run Locally
 
@@ -15,6 +49,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1g6_JXboWY-7rUh9xekTvnE
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
